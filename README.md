@@ -46,7 +46,7 @@ This avoids hard-coding a single database and makes the solution reusable.
 
 This screenshot shows the execution of the stored procedure with the target database name.
 
-![Stored Procedure Execution](link-to-image)
+![Stored Procedure Execution][(link-to-image](https://github.com/Vishnupd/Automated-SQL-Server-Index-Maintenance/blob/main/Stored%20procedure.png?raw=true))
 ![Stored Procedure Execution](link-to-image)
 
 ### 2. Table Discovery
