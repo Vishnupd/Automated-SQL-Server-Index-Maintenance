@@ -17,7 +17,6 @@ The goal was to improve database maintenance efficiency and support query perfor
 * Database metadata and object management
 * Database automation
 * Execution logging and monitoring
-* Backup, recovery, and database maintenance concepts
 
 ### Tools Used
 
