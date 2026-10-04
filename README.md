@@ -46,8 +46,8 @@ This avoids hard-coding a single database and makes the solution reusable.
 
 This screenshot shows the execution of the stored procedure with the target database name.
 
-![Stored Procedure Execution][(link-to-image](https://github.com/Vishnupd/Automated-SQL-Server-Index-Maintenance/blob/main/Stored%20procedure.png?raw=true))
-![Stored Procedure Execution](link-to-image)
+![Stored Procedure Execution](https://github.com/Vishnupd/Automated-SQL-Server-Index-Maintenance/blob/main/Stored%20procedure.png)
+![Stored Procedure Execution](https://github.com/Vishnupd/Automated-SQL-Server-Index-Maintenance/blob/main/Stored%20procedure_2.png)
 
 ### 2. Table Discovery
 
@@ -93,7 +93,7 @@ A FILLFACTOR of 80% is applied to leave free space on index pages, which can hel
 
 This screenshot shows the index rebuild operation being executed successfully.
 
-![Index Rebuild](link-to-image)
+![Index Rebuild](https://github.com/Vishnupd/Automated-SQL-Server-Index-Maintenance/blob/main/Table_Logging.png)
 
 ### 5. Execution Logging
 
