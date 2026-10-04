@@ -89,12 +89,6 @@ The procedure uses `ALTER INDEX ALL` to rebuild the indexes associated with the 
 
 A FILLFACTOR of 80% is applied to leave free space on index pages, which can help reduce page splits in workloads with frequent data modifications.
 
-*Ref 4: Index Rebuild Execution*
-
-This screenshot shows the index rebuild operation being executed successfully.
-
-![Index Rebuild](https://github.com/Vishnupd/Automated-SQL-Server-Index-Maintenance/blob/main/Table_Logging.png)
-
 ### 5. Execution Logging
 
 A dedicated logging table named `log_db_index_rebuild` records the outcome of each maintenance operation.
@@ -121,7 +115,7 @@ This provides an audit trail for tracking database maintenance activities.
 
 This screenshot shows the `log_db_index_rebuild` table containing the execution results.
 
-![Index Rebuild Log](link-to-image)
+![Index Rebuild](https://github.com/Vishnupd/Automated-SQL-Server-Index-Maintenance/blob/main/Table_Logging.png)
 
 ## Results / Benefits
 
