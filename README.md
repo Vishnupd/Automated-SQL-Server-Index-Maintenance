@@ -2,7 +2,7 @@
 
 ## Objective
 
-The **Automated SQL Server Index Maintenance** project was developed to automate the identification and rebuilding of highly fragmented indexes across database tables.
+The Automated SQL Server Index Maintenance project was developed to automate the identification and rebuilding of highly fragmented indexes across database tables.
 
 The goal was to improve database maintenance efficiency and support query performance by automatically identifying indexes that meet predefined fragmentation and page-count thresholds, rebuilding the affected indexes, and recording the execution status for monitoring and auditing.
 
@@ -21,12 +21,12 @@ The goal was to improve database maintenance efficiency and support query perfor
 
 ### Tools Used
 
-* **Microsoft SQL Server**
-* **SQL Server Management Studio (SSMS)**
-* **T-SQL**
-* **SQL Server DMVs**
-* **INFORMATION_SCHEMA**
-* **Dynamic SQL**
+* Microsoft SQL Server
+* SQL Server Management Studio (SSMS)
+* T-SQL
+* SQL Server DMVs
+* INFORMATION_SCHEMA
+* Dynamic SQL
 
 ## Steps
 
@@ -47,18 +47,13 @@ This avoids hard-coding a single database and makes the solution reusable.
 This screenshot shows the execution of the stored procedure with the target database name.
 
 ![Stored Procedure Execution](link-to-image)
+![Stored Procedure Execution](link-to-image)
 
 ### 2. Table Discovery
 
 The procedure retrieves base tables from the selected database using `INFORMATION_SCHEMA.TABLES`.
 
 Tables containing log-related names are excluded from the maintenance process to avoid unnecessary index operations on logging tables.
-
-*Ref 2: Table Discovery*
-
-This screenshot shows the tables identified by the procedure for index maintenance.
-
-![Table Discovery](link-to-image)
 
 ### 3. Index Fragmentation Analysis
 
@@ -80,12 +75,6 @@ WHERE avg_fragmentation_in_percent > 65
 
 Only indexes meeting these conditions are selected for maintenance.
 
-*Ref 3: Fragmentation Analysis*
-
-This screenshot shows the fragmentation results before the index rebuild operation.
-
-![Index Fragmentation](link-to-image)
-
 ### 4. Automated Index Rebuild
 
 When a table contains indexes meeting the defined criteria, the procedure dynamically generates an `ALTER INDEX` statement.
@@ -98,7 +87,7 @@ REBUILD WITH (FILLFACTOR = 80);
 
 The procedure uses `ALTER INDEX ALL` to rebuild the indexes associated with the selected table.
 
-A **FILLFACTOR of 80%** is applied to leave free space on index pages, which can help reduce page splits in workloads with frequent data modifications.
+A FILLFACTOR of 80% is applied to leave free space on index pages, which can help reduce page splits in workloads with frequent data modifications.
 
 *Ref 4: Index Rebuild Execution*
 
